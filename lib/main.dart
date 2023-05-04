@@ -34,6 +34,18 @@ class ElusiveBeats extends StatelessWidget {
       appBar: AppBar(
         elevation: 10.0,
       ),
+      body: ListView.builder(
+        itemExtent: 2.0,
+        itemBuilder: (BuildContext context, int index) {
+          return ListTile(
+              leading: const Icon(Icons.list),
+              trailing: const Text(
+                "GFG",
+                style: TextStyle(color: Colors.green, fontSize: 15),
+              ),
+              title: Text("List item $index"));
+        },
+      ),
     );
   }
 }
